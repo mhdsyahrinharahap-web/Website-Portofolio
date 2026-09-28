@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Syahrin — Network Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f4f1ea;--fg:#1b1a17;--mut:#6d685d;--line:#d9d3c5;--card:#ebe6da;--acc:#b4441c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141412;--fg:#ece8dd;--mut:#8f8a7d;--line:#2d2b26;--card:#1d1c19;--acc:#e8804f}}
+:root[data-theme="dark"]{--bg:#141412;--fg:#ece8dd;--mut:#8f8a7d;--line:#2d2b26;--card:#1d1c19;--acc:#e8804f}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "IBM Plex Sans",system-ui,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+header.nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav{display:flex;justify-content:space-between;align-items:center;height:60px;font-size:13px}
+nav a{color:var(--mut);text-decoration:none;margin-left:22px;padding:4px 0;border-bottom:1px solid transparent;transition:.2s}
+nav a:hover{color:var(--fg);border-color:var(--acc)}
+nav .brand{color:var(--fg);margin:0;font-weight:500;border:0}
+nav .brand i{color:var(--acc);font-style:normal}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.025em;margin:0}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:80px 0 56px}
+.tag{color:var(--acc);font-size:13px;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.tag:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 22%,transparent)}
+h1{font-size:clamp(44px,7.5vw,86px);line-height:.98}
+h1 em{font-style:italic;font-weight:400;color:var(--acc)}
+.hero p{max-width:48ch;color:var(--mut);font-size:18px;margin:26px 0 0}
+.cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.b{font:13px "IBM Plex Mono",monospace;padding:11px 18px;border-radius:3px;text-decoration:none;border:1px solid var(--fg);color:var(--fg);transition:.2s;cursor:pointer;background:none}
+.b.p{background:var(--fg);color:var(--bg)}
+.b:hover{border-color:var(--acc);color:var(--acc)}
+.b.p:hover{background:var(--acc);color:var(--bg)}
+.topo{width:100%;height:auto;color:var(--mut)}
+.topo line{stroke:var(--line);stroke-width:1.5}
+.topo .hot{stroke:var(--acc);stroke-dasharray:4 5;animation:flow 1.6s linear infinite}
+.topo circle{fill:var(--bg);stroke:var(--fg);stroke-width:1.5}
+.topo .core{fill:var(--acc);stroke:var(--acc)}
+.topo text{font:10px "IBM Plex Mono",monospace;fill:currentColor}
+@keyframes flow{to{stroke-dashoffset:-18}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:4px;margin-bottom:24px}
+.stat{padding:22px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font:600 34px/1.1 Fraunces,serif;letter-spacing:-.02em}
+.stat span{font-size:12px;color:var(--mut)}
+section{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:64px 0;border-top:1px solid var(--line)}
+.label{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em;padding-top:8px}
+.label b{color:var(--acc);font-weight:500;display:block;margin-bottom:4px}
+h2{font-size:32px;margin-bottom:24px}
+.about p{max-width:58ch;margin:0 0 16px;font-size:17px}
+.about p:first-of-type{font-size:20px;line-height:1.55}
+.row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:20px 12px;border-bottom:1px solid var(--line);margin:0 -12px;transition:.2s}
+.row:first-child{border-top:1px solid var(--line)}
+.row:hover{background:var(--card)}
+.row .t{font-size:18px}
+.row .m{color:var(--mut);font-size:12px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.sk{background:var(--card);padding:22px;border-radius:4px;border-top:2px solid var(--acc)}
+.sk h3{margin:0 0 16px;font:500 14px "IBM Plex Mono",monospace}
+.sk ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.sk li{font:12px "IBM Plex Mono",monospace;padding:4px 9px;border:1px solid var(--line);border-radius:99px;background:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.ph{aspect-ratio:4/3;background:var(--card);border:1px dashed var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+figure{margin:0}
+figure:hover img{transform:scale(1.04)}
+figcaption{font-size:13px;color:var(--mut);margin-top:8px}
+#add{margin-top:22px}
+.links a{display:flex;justify-content:space-between;align-items:center;padding:22px 12px;margin:0 -12px;border-bottom:1px solid var(--line);color:var(--fg);text-decoration:none;font:500 22px Fraunces,serif;transition:.2s}
+.links a:first-child{border-top:1px solid var(--line)}
+.links a span{color:var(--mut);font:12px "IBM Plex Mono",monospace}
+.links a:hover{color:var(--acc);padding-left:22px}
+footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.topo{max-width:320px}section{grid-template-columns:1fr;gap:8px;padding:48px 0}.stat{padding:16px}.stat b{font-size:26px}nav a{margin-left:14px}}
+@media(prefers-reduced-motion:reduce){.topo .hot{animation:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><nav class="mono">
+  <a class="brand" href="#top">syahrin<i>.</i></a>
+  <div><a href="#tentang">tentang</a><a href="#prestasi">prestasi</a><a href="#keahlian">keahlian</a><a href="#proyek">proyek</a><a href="#kontak">kontak</a></div>
+</nav></div></header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <div class="tag mono">Network Engineer · ITNSA</div>
+      <h1>Muhammad <em>Syahrin</em></h1>
+      <p>Saya membangun dan mengonfigurasi jaringan, dari firewall dan routing sampai topologi enterprise yang kompleks.</p>
+      <div class="cta"><a class="b p" href="#proyek">Lihat proyek</a><a class="b" href="#kontak">Hubungi saya</a></div>
+    </div>
+    <svg class="topo" viewBox="0 0 300 300" role="img" aria-label="Ilustrasi topologi jaringan">
+      <line x1="150" y1="150" x2="150" y2="40"/><line x1="150" y1="150" x2="245" y2="95"/><line x1="150" y1="150" x2="245" y2="205"/>
+      <line x1="150" y1="150" x2="150" y2="260"/><line x1="150" y1="150" x2="55" y2="205"/><line x1="150" y1="150" x2="55" y2="95"/>
+      <line class="hot" x1="150" y1="150" x2="245" y2="95"/><line class="hot" x1="150" y1="150" x2="55" y2="205"/>
+      <line x1="150" y1="40" x2="245" y2="95"/><line x1="55" y1="95" x2="150" y2="40"/><line x1="55" y1="205" x2="150" y2="260"/><line x1="245" y1="205" x2="150" y2="260"/>
+      <circle cx="150" cy="40" r="9"/><circle cx="245" cy="95" r="9"/><circle cx="245" cy="205" r="9"/>
+      <circle cx="150" cy="260" r="9"/><circle cx="55" cy="205" r="9"/><circle cx="55" cy="95" r="9"/>
+      <circle class="core" cx="150" cy="150" r="14"/>
+      <text x="164" y="146">core</text><text x="160" y="30">BGP</text><text x="258" y="99">OSPF</text><text x="20" y="99">LB</text>
+    </svg>
+  </div>
+
+  <div class="stats rv">
+    <div class="stat"><b>#1</b><span>LKS Provinsi Sumut 2026</span></div>
+    <div class="stat"><b>707</b><span>Skor LKS Nasional</span></div>
+    <div class="stat"><b>3</b><span>Platform: Debian, Mikrotik, Cisco</span></div>
+  </div>
+
+  <section id="tentang" class="rv">
+    <div class="label mono"><b>01</b>Tentang saya</div>
+    <div class="about">
+      <p>Saya Syahrin, seorang yang berkecimpung di dunia jaringan komputer. Yang paling saya nikmati adalah menyusun topologi yang rumit, lalu memastikan setiap lapisannya berjalan: routing, keamanan, sampai pembagian beban.</p>
+      <p>Saya biasa bekerja dengan Debian, Mikrotik, dan Cisco, dan juga nyaman mengelola Windows Server. Lewat LKS ITNSA saya terbiasa mengerjakan konfigurasi di bawah tekanan waktu, dan itu membentuk cara kerja saya: rapi, teliti, dan tetap tenang saat ada yang tidak jalan.</p>
+      <p>Saya masih terus belajar, dan terbuka untuk berdiskusi atau berkolaborasi soal jaringan.</p>
+    </div>
+  </section>
+
+  <section id="prestasi" class="rv">
+    <div class="label mono"><b>02</b>Prestasi</div>
+    <div>
+      <div class="row"><span class="t">Juara 1 LKS Tingkat Provinsi Sumatera Utara</span><span class="m mono">2026 · ITNSA</span></div>
+      <div class="row"><span class="t">Kontingen Sumatera Utara di LKS Nasional</span><span class="m mono">2026 · ITNSA</span></div>
+      <div class="row"><span class="t">Medallion for Excellence, LKS Nasional — skor 707</span><span class="m mono">2026 · ITNSA</span></div>
+    </div>
+  </section>
+
+  <section id="keahlian" class="rv">
+    <div class="label mono"><b>03</b>Keahlian</div>
+    <div class="skills">
+      <div class="sk"><h3>Debian</h3><ul><li>Firewall</li><li>Routing</li><li>Load Balancing</li></ul></div>
+      <div class="sk"><h3>Mikrotik</h3><ul><li>Firewall</li><li>Routing</li><li>TCP/IP</li><li>Dynamic Routing</li></ul></div>
+      <div class="sk"><h3>Cisco</h3><ul><li>Firewall</li><li>OSPF</li><li>Static Routing</li><li>TCP/IP</li><li>BGP</li></ul></div>
+    </div>
+  </section>
+
+  <section id="proyek" class="rv">
+    <div class="label mono"><b>04</b>Proyek</div>
+    <div>
+      <div class="gal" id="gal"></div>
+      <button class="b" id="add">+ coba tambah foto</button>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+    </div>
+  </section>
+
+  <section id="kontak" class="rv">
+    <div class="label mono"><b>05</b>Terhubung dengan saya</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/muhammad-syahrin-bb0593336/" target="_blank" rel="noopener">LinkedIn <span>muhammad-syahrin ↗</span></a>
+      <a href="https://www.instagram.com/syahrinn_hrp7/" target="_blank" rel="noopener">Instagram <span>@syahrinn_hrp7 ↗</span></a>
+    </div>
+  </section>
+
+  <footer class="mono"><span>© 2026 Muhammad Syahrin</span><a href="#top" style="color:inherit">↑ atas</a></footer>
+</main>
+
+<script>
+var PROJECTS=[];
+var gal=document.getElementById('gal');
+function render(){
+  gal.innerHTML='';
+  var items=PROJECTS.slice();
+  if(!items.length){for(var i=1;i<=3;i++)items.push({ph:'foto proyek '+i});}
+  items.forEach(function(p){
+    var f=document.createElement('figure'),d=document.createElement('div');d.className='ph mono';
+    if(p.src){var im=document.createElement('img');im.src=p.src;im.alt=p.cap||'Proyek';d.appendChild(im);}else d.textContent=p.ph;
+    f.appendChild(d);
+    if(p.cap){var c=document.createElement('figcaption');c.textContent=p.cap;f.appendChild(c);}
+    gal.appendChild(f);
+  });
+}
+document.getElementById('add').onclick=function(){document.getElementById('file').click();};
+document.getElementById('file').onchange=function(e){
+  Array.prototype.forEach.call(e.target.files,function(file){
+    var r=new FileReader();
+    r.onload=function(){PROJECTS.push({src:r.result,cap:file.name.replace(/\.[^.]+$/,'')});render();};
+    r.readAsDataURL(file);
+  });
+};
+render();
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08});
+  els.forEach(function(e){io.observe(e);});
+}else els.forEach(function(e){e.classList.add('in');});
+</script>
+</body>
+</html>
