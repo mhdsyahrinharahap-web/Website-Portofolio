@@ -61,13 +61,14 @@ h2{font-size:32px;margin-bottom:24px}
 .sk h3{margin:0 0 16px;font:500 14px "IBM Plex Mono",monospace}
 .sk ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .sk li{font:12px "IBM Plex Mono",monospace;padding:4px 9px;border:1px solid var(--line);border-radius:99px;background:var(--bg)}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
-.ph{aspect-ratio:4/3;background:var(--card);border:1px dashed var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-figure{margin:0}
-figure:hover img{transform:scale(1.04)}
-figcaption{font-size:13px;color:var(--mut);margin-top:8px}
-#add{margin-top:22px}
+.pj{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:26px 12px;margin:0 -12px;border-bottom:1px solid var(--line);transition:.2s}
+.pj:first-child{border-top:1px solid var(--line)}
+.pj:hover{background:var(--card)}
+.pn{color:var(--acc);font-size:13px;padding-top:6px}
+.pj h3{font:600 22px/1.25 Fraunces,Georgia,serif;letter-spacing:-.01em;margin:0 0 8px}
+.pj p{margin:0 0 14px;color:var(--mut);max-width:62ch}
+.pj ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.pj li{font:12px "IBM Plex Mono",monospace;padding:4px 9px;border:1px solid var(--line);border-radius:99px;background:var(--bg)}
 .links a{display:flex;justify-content:space-between;align-items:center;padding:22px 12px;margin:0 -12px;border-bottom:1px solid var(--line);color:var(--fg);text-decoration:none;font:500 22px Fraunces,serif;transition:.2s}
 .links a:first-child{border-top:1px solid var(--line)}
 .links a span{color:var(--mut);font:12px "IBM Plex Mono",monospace}
@@ -75,13 +76,13 @@ figcaption{font-size:13px;color:var(--mut);margin-top:8px}
 footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between}
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
 .rv.in{opacity:1;transform:none}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.topo{max-width:320px}section{grid-template-columns:1fr;gap:8px;padding:48px 0}.stat{padding:16px}.stat b{font-size:26px}nav a{margin-left:14px}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.topo{max-width:320px}.pj{grid-template-columns:32px 1fr}section{grid-template-columns:1fr;gap:8px;padding:48px 0}.stat{padding:16px}.stat b{font-size:26px}nav a{margin-left:14px}}
 @media(prefers-reduced-motion:reduce){.topo .hot{animation:none}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap"><nav class="mono">
-  <a class="brand" href="#top">Muhammad Syahrin<i>.</i></a>
+  <a class="brand" href="#top">Muhammad Syahrin</a>
   <div><a href="#tentang">tentang</a><a href="#prestasi">prestasi</a><a href="#keahlian">keahlian</a><a href="#proyek">proyek</a><a href="#kontak">kontak</a></div>
 </nav></div></header>
 
@@ -89,7 +90,7 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
   <div class="hero">
     <div>
       <div class="tag mono">Network Engineer · ITNSA</div>
-      <h1>Muhammad <em>Syahrin</em></h1>
+      <h1>Muhammad Syahrin</h1>
       <p>Saya membangun dan mengonfigurasi jaringan, dari firewall dan routing sampai topologi enterprise yang kompleks.</p>
       <div class="cta"><a class="b p" href="#proyek">Lihat proyek</a><a class="b" href="#kontak">Hubungi saya</a></div>
     </div>
@@ -123,25 +124,28 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
   <section id="prestasi" class="rv">
     <div class="label mono"><b>02</b>Prestasi</div>
     <div>
-      <div class="row"><span class="t">Gold Medal LKS Tingkat Provinsi Sumatera Utara</span><span class="m mono">2026 · ITNSA</span></div>
+      <div class="row"><span class="t">Juara 1 LKS Tingkat Provinsi Sumatera Utara</span><span class="m mono">2026 · ITNSA</span></div>
       <div class="row"><span class="t">Kontingen Sumatera Utara di LKS Nasional</span><span class="m mono">2026 · ITNSA</span></div>
       <div class="row"><span class="t">Medallion for Excellence, LKS Nasional — skor 707</span><span class="m mono">2026 · ITNSA</span></div>
-      <div class="row"><span class="t">FInalis LKS Nasional</span><span class="m mono">2026 · ITNSA</span></div>
-      <div class="row"><span class="t">Peserta Olimpiade Jaringan Mikrotik 2026</span><span class="m mono">2026 · OJM</span></div>
     </div>
   </section>
 
   <section id="keahlian" class="rv">
     <div class="label mono"><b>03</b>Keahlian</div>
     <div class="skills">
-      <div class="sk"><h3>Debian</h3><ul><li>Firewall</li><li>Routing</li><li>Load Balancing</li></ul></div>
+      <div class="sk"><h3>Debian</h3><ul><li>Firewall</li><li>Routing</li><li>Load Balancing</li><li>Web Server</li><li>DNS Server</li><li>OpenVPN</li><li>Database</li></ul></div>
       <div class="sk"><h3>Mikrotik</h3><ul><li>Firewall</li><li>Routing</li><li>TCP/IP</li><li>Dynamic Routing</li></ul></div>
       <div class="sk"><h3>Cisco</h3><ul><li>Firewall</li><li>OSPF</li><li>Static Routing</li><li>TCP/IP</li><li>BGP</li></ul></div>
     </div>
   </section>
 
+  <section id="proyek" class="rv">
+    <div class="label mono"><b>04</b>Proyek</div>
+    <div><div class="pj"><span class="pn mono">01</span><div><h3>Sistem Absensi Siswa Full-Stack</h3><p>Mengembangkan aplikasi absensi berbasis web (PHP, Apache, MariaDB) dan Android Native (Kotlin) yang terintegrasi dengan server Debian LDAP, lengkap dengan fitur cap foto (kamera) dan lokasi.</p><ul><li>PHP</li><li>Apache</li><li>MariaDB</li><li>Kotlin</li><li>LDAP</li></ul></div></div><div class="pj"><span class="pn mono">02</span><div><h3>Otomatisasi Infrastruktur IT</h3><p>Pembuatan playbook Ansible dan skrip YAML untuk deployment otomatis layanan Nginx, Apache2, dan DNS pada node Debian.</p><ul><li>Ansible</li><li>YAML</li><li>Nginx</li><li>Apache2</li><li>DNS</li></ul></div></div><div class="pj"><span class="pn mono">03</span><div><h3>Implementasi Routing, Switching, &amp; Load Balancing Lanjut</h3><p>Konfigurasi VLAN, HSRP, EtherChannel, dan Inter-VLAN routing pada Cisco IOS; serta load balancing PCC, filter, dan queue bandwidth pada MikroTik RouterOS.</p><ul><li>Cisco IOS</li><li>VLAN</li><li>HSRP</li><li>EtherChannel</li><li>MikroTik</li><li>PCC</li></ul></div></div></div>
+  </section>
+
   <section id="kontak" class="rv">
-    <div class="label mono"><b>04</b>Terhubung dengan saya</div>
+    <div class="label mono"><b>05</b>Terhubung dengan saya</div>
     <div class="links">
       <a href="https://www.linkedin.com/in/muhammad-syahrin-bb0593336/" target="_blank" rel="noopener">LinkedIn <span>muhammad-syahrin ↗</span></a>
       <a href="https://www.instagram.com/syahrinn_hrp7/" target="_blank" rel="noopener">Instagram <span>@syahrinn_hrp7 ↗</span></a>
@@ -152,29 +156,6 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
 </main>
 
 <script>
-var PROJECTS=[];
-var gal=document.getElementById('gal');
-function render(){
-  gal.innerHTML='';
-  var items=PROJECTS.slice();
-  if(!items.length){for(var i=1;i<=3;i++)items.push({ph:'foto proyek '+i});}
-  items.forEach(function(p){
-    var f=document.createElement('figure'),d=document.createElement('div');d.className='ph mono';
-    if(p.src){var im=document.createElement('img');im.src=p.src;im.alt=p.cap||'Proyek';d.appendChild(im);}else d.textContent=p.ph;
-    f.appendChild(d);
-    if(p.cap){var c=document.createElement('figcaption');c.textContent=p.cap;f.appendChild(c);}
-    gal.appendChild(f);
-  });
-}
-document.getElementById('add').onclick=function(){document.getElementById('file').click();};
-document.getElementById('file').onchange=function(e){
-  Array.prototype.forEach.call(e.target.files,function(file){
-    var r=new FileReader();
-    r.onload=function(){PROJECTS.push({src:r.result,cap:file.name.replace(/\.[^.]+$/,'')});render();};
-    r.readAsDataURL(file);
-  });
-};
-render();
 var els=document.querySelectorAll('.rv');
 if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08});
