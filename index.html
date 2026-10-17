@@ -74,6 +74,27 @@ h2{font-size:32px;margin-bottom:24px}
 .links a span{color:var(--mut);font:12px "IBM Plex Mono",monospace}
 .links a:hover{color:var(--acc);padding-left:22px}
 footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between}
+
+.cg{margin:0 0 40px}
+.cg:last-child{margin:0}
+.cg h3{font:500 13px "IBM Plex Mono",monospace;color:var(--mut);margin:0 0 16px;display:flex;gap:10px;align-items:baseline}
+.cg h3 span{color:var(--acc)}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.cert{all:unset;box-sizing:border-box;cursor:zoom-in;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:border-color .2s,transform .2s}
+.cert:hover{border-color:var(--acc);transform:translateY(-2px)}
+.cert:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.cert .th{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.cert .th img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.cert .tx{padding:14px 16px 16px}
+.cert .tt{display:block;font:600 16px/1.3 Fraunces,Georgia,serif;margin-bottom:6px}
+.cert .tm{display:block;font:12px/1.5 "IBM Plex Mono",monospace;color:var(--mut)}
+dialog#lb{border:0;padding:0;background:transparent;max-width:min(94vw,1100px);max-height:92vh;overflow:visible;color:var(--fg)}
+dialog#lb::backdrop{background:rgba(0,0,0,.75)}
+dialog#lb figure{margin:0;background:var(--bg);border-radius:4px;overflow:hidden}
+dialog#lb img{display:block;max-width:100%;max-height:78vh;margin:0 auto;background:#fff}
+dialog#lb figcaption{padding:14px 18px;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:14px}
+dialog#lb .x{font:13px "IBM Plex Mono",monospace;background:none;border:1px solid var(--fg);color:var(--fg);padding:8px 14px;border-radius:3px;cursor:pointer;flex:none}
+dialog#lb .x:hover{border-color:var(--acc);color:var(--acc)}
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
 .rv.in{opacity:1;transform:none}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.topo{max-width:320px}.pj{grid-template-columns:32px 1fr}section{grid-template-columns:1fr;gap:8px;padding:48px 0}.stat{padding:16px}.stat b{font-size:26px}nav a{margin-left:14px}}
@@ -83,7 +104,7 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
 <body>
 <header class="nav"><div class="wrap"><nav class="mono">
   <a class="brand" href="#top">Muhammad Syahrin</a>
-  <div><a href="#tentang">tentang</a><a href="#prestasi">prestasi</a><a href="#keahlian">keahlian</a><a href="#proyek">proyek</a><a href="#kontak">kontak</a></div>
+  <div><a href="#tentang">tentang</a><a href="#prestasi">prestasi</a><a href="#keahlian">keahlian</a><a href="#proyek">proyek</a><a href="#sertifikat">sertifikat</a><a href="#kontak">kontak</a></div>
 </nav></div></header>
 
 <main class="wrap" id="top">
@@ -109,7 +130,7 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
   <div class="stats rv">
     <div class="stat"><b>#1</b><span>LKS Provinsi Sumut 2026</span></div>
     <div class="stat"><b>707</b><span>Skor LKS Nasional</span></div>
-    <div class="stat"><b>3</b><span>Platform: Debian, Mikrotik, Cisco</span></div>
+    <div class="stat"><b>4</b><span>Platform: Debian, Windows Server, Mikrotik, Cisco</span></div>
   </div>
 
   <section id="tentang" class="rv">
@@ -138,6 +159,7 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
       <div class="sk"><h3>Debian</h3><ul><li>Firewall</li><li>Routing</li><li>Load Balancing</li><li>Web Server</li><li>DNS Server</li><li>OpenVPN</li><li>Database</li></ul></div>
       <div class="sk"><h3>Mikrotik</h3><ul><li>Firewall</li><li>Routing</li><li>TCP/IP</li><li>Dynamic Routing</li></ul></div>
       <div class="sk"><h3>Cisco</h3><ul><li>Firewall</li><li>OSPF</li><li>Static Routing</li><li>TCP/IP</li><li>BGP</li></ul></div>
+      <div class="sk"><h3>Windows Server</h3><ul><li>ADDS</li><li>RRAS</li><li>VPN</li><li>GPO</li><li>File Management</li></ul></div>
     </div>
   </section>
 
@@ -146,8 +168,18 @@ footer{padding:36px 0;color:var(--mut);font-size:12px;border-top:1px solid var(-
     <div><div class="pj"><span class="pn mono">01</span><div><h3>Sistem Absensi Siswa Full-Stack</h3><p>Mengembangkan aplikasi absensi berbasis web (PHP, Apache, MariaDB) dan Android Native (Kotlin) yang terintegrasi dengan server Debian LDAP, lengkap dengan fitur cap foto (kamera) dan lokasi.</p><ul><li>PHP</li><li>Apache</li><li>MariaDB</li><li>Kotlin</li><li>LDAP</li></ul></div></div><div class="pj"><span class="pn mono">02</span><div><h3>Otomatisasi Infrastruktur IT</h3><p>Pembuatan playbook Ansible dan skrip YAML untuk deployment otomatis layanan Nginx, Apache2, dan DNS pada node Debian.</p><ul><li>Ansible</li><li>YAML</li><li>Nginx</li><li>Apache2</li><li>DNS</li></ul></div></div><div class="pj"><span class="pn mono">03</span><div><h3>Implementasi Routing, Switching, &amp; Load Balancing Lanjut</h3><p>Konfigurasi VLAN, HSRP, EtherChannel, dan Inter-VLAN routing pada Cisco IOS; serta load balancing PCC, filter, dan queue bandwidth pada MikroTik RouterOS.</p><ul><li>Cisco IOS</li><li>VLAN</li><li>HSRP</li><li>EtherChannel</li><li>MikroTik</li><li>PCC</li></ul></div></div></div>
   </section>
 
+  <section id="sertifikat" class="rv">
+    <div class="label mono"><b>05</b>Sertifikat</div>
+    <div>
+      <div class="cg"><h3>Kompetisi <span>4</span></h3><div class="certs"><button type="button" class="cert" data-full="sertifikat/lks-provinsi-juara-1.jpg" data-cap="Juara I LKS Provinsi Sumatera Utara"><span class="th"><img src="sertifikat/lks-provinsi-juara-1.jpg" alt="Sertifikat Juara I LKS Provinsi Sumatera Utara" loading="lazy"></span><span class="tx"><span class="tt">Juara I LKS Provinsi Sumatera Utara</span><span class="tm">IT System Administration · 27–29 April 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/lks-nasional-moe.jpg" data-cap="Medallion for Excellence LKS Nasional"><span class="th"><img src="sertifikat/lks-nasional-moe.jpg" alt="Sertifikat Medallion for Excellence LKS Nasional" loading="lazy"></span><span class="tx"><span class="tt">Medallion for Excellence LKS Nasional</span><span class="tm">IT Network System Administration · 26 Juli – 1 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/lks-nasional-finalis.jpg" data-cap="Finalis LKS Nasional"><span class="th"><img src="sertifikat/lks-nasional-finalis.jpg" alt="Sertifikat Finalis LKS Nasional" loading="lazy"></span><span class="tx"><span class="tt">Finalis LKS Nasional</span><span class="tm">IT Network System Administration · 26 Juli – 1 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/olimpiade-jaringan-mikrotik-2026.jpg" data-cap="Peserta Olimpiade Jaringan Mikrotik 2026"><span class="th"><img src="sertifikat/olimpiade-jaringan-mikrotik-2026.jpg" alt="Sertifikat Peserta Olimpiade Jaringan Mikrotik 2026" loading="lazy"></span><span class="tx"><span class="tt">Peserta Olimpiade Jaringan Mikrotik 2026</span><span class="tm">MikroTik · 3 September 2026</span></span></button></div></div>
+      <div class="cg"><h3>Kursus &amp; pelatihan <span>7</span></h3><div class="certs"><button type="button" class="cert" data-full="sertifikat/linux-fundamental-aguna.jpg" data-cap="Linux Fundamental"><span class="th"><img src="sertifikat/linux-fundamental-aguna.jpg" alt="Sertifikat Linux Fundamental" loading="lazy"></span><span class="tx"><span class="tt">Linux Fundamental</span><span class="tm">Aguna Course · 15 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/networking-basics-cisco.jpg" data-cap="Networking Basics"><span class="th"><img src="sertifikat/networking-basics-cisco.jpg" alt="Sertifikat Networking Basics" loading="lazy"></span><span class="tx"><span class="tt">Networking Basics</span><span class="tm">Cisco Networking Academy · 8 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/data-analytics-essentials-cisco.jpg" data-cap="Data Analytics Essentials"><span class="th"><img src="sertifikat/data-analytics-essentials-cisco.jpg" alt="Sertifikat Data Analytics Essentials" loading="lazy"></span><span class="tx"><span class="tt">Data Analytics Essentials</span><span class="tm">Cisco Networking Academy · 8 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/intro-data-science-cisco.jpg" data-cap="Introduction to Data Science"><span class="th"><img src="sertifikat/intro-data-science-cisco.jpg" alt="Sertifikat Introduction to Data Science" loading="lazy"></span><span class="tx"><span class="tt">Introduction to Data Science</span><span class="tm">Cisco Networking Academy · 8 Agustus 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/intro-modern-ai-cisco.jpg" data-cap="Introduction to Modern AI"><span class="th"><img src="sertifikat/intro-modern-ai-cisco.jpg" alt="Sertifikat Introduction to Modern AI" loading="lazy"></span><span class="tx"><span class="tt">Introduction to Modern AI</span><span class="tm">Cisco Networking Academy · 16 September 2026</span></span></button><button type="button" class="cert" data-full="sertifikat/cisco-dasar-id-networkers.jpg" data-cap="Cisco Dasar"><span class="th"><img src="sertifikat/cisco-dasar-id-networkers.jpg" alt="Sertifikat Cisco Dasar" loading="lazy"></span><span class="tx"><span class="tt">Cisco Dasar</span><span class="tm">ID-Networkers · berlaku sampai 7 Juni 2029</span></span></button><button type="button" class="cert" data-full="sertifikat/jaringan-komputer-dasar-id-networkers.jpg" data-cap="Jaringan Komputer Dasar"><span class="th"><img src="sertifikat/jaringan-komputer-dasar-id-networkers.jpg" alt="Sertifikat Jaringan Komputer Dasar" loading="lazy"></span><span class="tx"><span class="tt">Jaringan Komputer Dasar</span><span class="tm">ID-Networkers · berlaku sampai 7 Juni 2029</span></span></button></div></div>
+    </div>
+  </section>
+
+  <dialog id="lb" aria-label="Pratinjau sertifikat"><figure><img id="lbi" alt=""><figcaption><span id="lbc"></span><button type="button" class="x" id="lbx">Tutup</button></figcaption></figure></dialog>
+
   <section id="kontak" class="rv">
-    <div class="label mono"><b>05</b>Terhubung dengan saya</div>
+    <div class="label mono"><b>06</b>Terhubung dengan saya</div>
     <div class="links">
       <a href="https://www.linkedin.com/in/muhammad-syahrin-bb0593336/" target="_blank" rel="noopener">LinkedIn <span>Muhammad Syahrin ↗</span></a>
       <a href="https://www.instagram.com/syahrinn_hrp7/" target="_blank" rel="noopener">Instagram <span>@syahrinn_hrp7 ↗</span></a>
@@ -164,6 +196,14 @@ if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.08});
   els.forEach(function(e){io.observe(e);});
 }else els.forEach(function(e){e.classList.add('in');});
+
+var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
+document.querySelectorAll('.cert').forEach(function(b){b.addEventListener('click',function(){
+  lbi.src=b.dataset.full;lbi.alt='Sertifikat '+b.dataset.cap;lbc.textContent=b.dataset.cap;
+  if(lb.showModal)lb.showModal();else lb.setAttribute('open','');
+});});
+document.getElementById('lbx').addEventListener('click',function(){lb.close();});
+lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
 </script>
 </body>
 </html>
