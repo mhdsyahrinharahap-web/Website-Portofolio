@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portofoliosyahrin.my.id/sitemap.xml
