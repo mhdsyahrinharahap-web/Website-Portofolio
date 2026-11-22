@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="Muhammad Syahrin — Network Engineer &amp; System Administrator">
 <meta name="twitter:description" content="IT Network System Administrator. Juara 1 LKS Provinsi Sumut 2026, Medallion for Excellence LKS Nasional.">
 <meta name="twitter:image" content="https://portofoliosyahrin.my.id/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Muhammad Syahrin", "alternateName": "Mhd Syahrin Harahap", "jobTitle": "IT Network System Administrator", "url": "https://portofoliosyahrin.my.id/", "image": "https://portofoliosyahrin.my.id/foto-syahrin.webp", "description": "IT Network System Administrator. Juara 1 LKS Provinsi Sumatera Utara 2026 dan peraih Medallion for Excellence LKS Nasional 2026 bidang IT Network System Administration.", "sameAs": ["https://www.linkedin.com/in/muhammad-syahrin-bb0593336/", "https://www.instagram.com/syahrinn_hrp7/", "https://www.youtube.com/@mhdsyahrinharahap"], "knowsAbout": ["Network administration", "MikroTik", "Cisco", "Debian Linux", "Windows Server", "Ansible"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Muhammad Syahrin", "alternateName": "Mhd Syahrin Harahap", "jobTitle": "IT Network System Administrator", "url": "https://portofoliosyahrin.my.id/", "image": "https://portofoliosyahrin.my.id/foto-syahrin.png", "description": "IT Network System Administrator. Juara 1 LKS Provinsi Sumatera Utara 2026 dan peraih Medallion for Excellence LKS Nasional 2026 bidang IT Network System Administration.", "sameAs": ["https://www.linkedin.com/in/muhammad-syahrin-bb0593336/", "https://www.instagram.com/syahrinn_hrp7/", "https://www.youtube.com/@mhdsyahrinharahap"], "knowsAbout": ["Network administration", "MikroTik", "Cisco", "Debian Linux", "Windows Server", "Ansible"]}</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root{--bg:#eef4f8;--surface:#fff;--ink:#0a1f33;--mut:#4f6378;--line:#d3dfe9;--acc:#0e9ad8;--acc-ink:#0670a3;--gold:#b9810a;--a1:#16a9e9;--a2:#0a6fa3}
@@ -94,6 +94,12 @@ ul.tags li{font:12px "JetBrains Mono",monospace;padding:4px 9px;border:1px solid
 .pj:hover{background:var(--surface)}
 .pj h3{font-size:22px;font-weight:700;line-height:1.25;letter-spacing:-.01em;margin-bottom:8px}
 .pj p{margin:0 0 14px;color:var(--mut);max-width:64ch}
+.pj.has-img{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start}
+.pa{display:block;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.pa img{display:block;width:100%;height:auto}
+.plinks{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px}
+.plinks a{font-weight:600;font-size:15px;color:var(--acc-ink);text-decoration:none}
+.plinks a:hover{text-decoration:underline}
 
 .cg{margin:0 0 44px}
 .cg:last-child{margin:0}
@@ -143,6 +149,7 @@ footer a{color:inherit}
  section{grid-template-columns:1fr;gap:12px;padding:52px 0}
  .stat{padding:16px}.stat b{font-size:28px}.stat span{font-size:12px}
  nav .lk{gap:16px}
+ .pj.has-img{grid-template-columns:1fr;gap:16px}
 }
 @media(max-width:520px){nav .brand{font-size:15px}.wrap{padding:0 20px}.row{grid-template-columns:1fr;gap:2px}.links a{font-size:19px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
@@ -162,7 +169,7 @@ footer a{color:inherit}
       <p>Network Engineer/Sysadmin/ITNSA Expert</p>
       <div class="cta"><a class="b p" href="#proyek">Lihat proyek</a><a class="b" href="#kontak">Hubungi saya</a><a class="b" href="CV-Muhammad-Syahrin.pdf" download="CV-Muhammad-Syahrin.pdf">Unduh CV</a></div>
     </div>
-    <div class="portrait"><img src="foto-syahrin.webp" width="495" height="1036" alt="Muhammad Syahrin memegang piala juara LKS"></div>
+    <div class="portrait"><img src="foto-syahrin.png" width="495" height="1036" alt="Muhammad Syahrin memegang piala juara LKS"></div>
   </div>
 
   <div class="stats">
@@ -203,9 +210,8 @@ footer a{color:inherit}
   <section id="proyek">
     <h2>Proyek</h2>
     <div>
-      <div class="pj"><h3>Sistem Absensi Siswa Full-Stack</h3><p>Mengembangkan aplikasi absensi berbasis web (PHP, Apache, MariaDB) dan Android Native (Kotlin) yang terintegrasi dengan server Debian LDAP, lengkap dengan fitur cap foto (kamera) dan lokasi.</p><ul class="tags"><li>PHP</li><li>Apache</li><li>MariaDB</li><li>Kotlin</li><li>LDAP</li></ul></div>
-      <div class="pj"><h3>Otomatisasi Infrastruktur IT</h3><p>Pembuatan playbook Ansible dan skrip YAML untuk deployment otomatis layanan Nginx, Apache2, dan DNS pada node Debian.</p><ul class="tags"><li>Ansible</li><li>YAML</li><li>Nginx</li><li>Apache2</li><li>DNS</li></ul></div>
-      <div class="pj"><h3>Implementasi Routing, Switching, &amp; Load Balancing Lanjut</h3><p>Konfigurasi VLAN, HSRP, EtherChannel, dan Inter-VLAN routing pada Cisco IOS; serta load balancing PCC, filter, dan queue bandwidth pada MikroTik RouterOS.</p><ul class="tags"><li>Cisco IOS</li><li>VLAN</li><li>HSRP</li><li>EtherChannel</li><li>MikroTik</li><li>PCC</li></ul></div>
+      <div class="pj has-img"><a class="pa" href="https://github.com/mhdsyahrinharahap-web/lks-skills" target="_blank" rel="noopener" aria-label="LKS Skills untuk Gemini AI, buka di tab baru"><img src="proyek/lks-skills.webp" width="2400" height="720" alt="Banner LKS Skills untuk Gemini, persiapan LKS dan ITNSA Network Systems Administration" loading="lazy"></a><div><h3>LKS Skills untuk Gemini AI</h3><p>Kumpulan skill kustom untuk Gemini AI sebagai asisten persiapan LKS bidang IT Network Systems Administration (ITNSA). Membantu pengerjaan konfigurasi jaringan dan server langkah demi langkah, dan dibuat untuk membantu adik kelas mempersiapkan kompetisi.</p><ul class="tags"><li>Gemini AI</li><li>SKILL.md</li><li>LKS</li><li>ITNSA</li><li>GitHub</li></ul><div class="plinks"><a href="https://github.com/mhdsyahrinharahap-web/lks-skills" target="_blank" rel="noopener">Lihat di GitHub</a></div></div></div>
+      <div class="pj has-img"><a class="pa" href="https://filekit.web.id" target="_blank" rel="noopener" aria-label="FileKit, buka di tab baru"><img src="proyek/filekit.webp" width="1400" height="659" alt="Tampilan website FileKit untuk kompres, gabung, dan konversi file" loading="lazy"></a><div><h3>FileKit</h3><p>Website untuk mengompres gambar (JPG, PNG, WebP) dan PDF, menggabungkan beberapa PDF, serta mengonversi file antar format. Prosesnya langsung dari browser, tanpa daftar dan tanpa batas kuota harian.</p><ul class="tags"><li>Kompres</li><li>Gabung PDF</li><li>Konversi</li><li>PDF</li><li>JPG</li><li>PNG</li></ul><div class="plinks"><a href="https://filekit.web.id" target="_blank" rel="noopener">Buka website</a></div></div></div>
     </div>
   </section>
 
